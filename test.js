@@ -5,13 +5,14 @@ const driver = new webdriver.Builder()
   .withCapabilities({
     'goog:chromeOptions': {
       // Here is the path to your Electron binary.
-      binary: '/opt/ometadefender-mk5/ui/ui'
-	args: [
-                    "--disable-dev-shm-usage"
-                ]
+	binary: '/opt/ometadefender-mk5/ui/ui',
+	args: ['--disable-dev-shm-usage',
+		'--no-sandbox'],
     }
   })
   .forBrowser('chrome') // note: use .forBrowser('electron') for selenium-webdriver <= 3.6.0
   .build()
+driver.get('button')[0]
+
 driver.get('http://www.google.com')
 
