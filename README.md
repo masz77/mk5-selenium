@@ -1,0 +1,2 @@
+- start chromedriver server by using: ./node_modules/.bin/chromedriver
+- node test.js
